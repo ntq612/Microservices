@@ -1,11 +1,7 @@
-﻿using Catalog.Api.Models;
-using Catalog.Api.Products.CreateProduct;
-
+﻿using Catalog.Api.Products.CreateProduct;
 namespace Catalog.Api.Products.GetProduct;
-
 public record GetProductRequest(int? PageNumber = 1, int? PageSize = 10);
 public record GetProductResponse(IEnumerable<Product> Products);
-
 public class GetProductEndpoint : ICarterModule
 {
     public void AddRoutes(IEndpointRouteBuilder app)

@@ -1,16 +1,27 @@
-﻿using Basket.API.Models;
-using BuildingBlocks.CQRS;
+﻿using Carter;
+using Mapster;
+using MediatR;
 
-namespace Basket.API.Basket.GetBasket
+namespace Basket.API.Basket.GetBasket;
+
+public record GetBasketRequest(string UserName);
+public record GetBasketResponse(ShoppingCart Cart);
+public class GetBasketEndpoint : ICarterModule
 {
-    public record GetBasketQuery(string userName) : IQuery<GetBasketResult>;
-    public record GetBasketResult(ShoppingCart Cart);
-    public class GetBasketQueryEndpoint : IQueryHandler<GetBasketQuery, GetBasketResult>
+    public void AddRoutes(IEndpointRouteBuilder app)
     {
-        public Task<GetBasketResult> Handle(GetBasketQuery request, CancellationToken cancellationToken)
+        app.MapGet("/basket/{userName}", async (string userName, ISender sender) =>
         {
-            
-            throw new NotImplementedException();
-        }
+            var result = await sender.Send(new GetBasketQuery(userName));
+
+            var response = result.Adapt<GetBasketResponse>();
+
+            return Results.Ok(response);
+        })
+        .WithName("GetBasket")
+        .Produces<GetBasketResponse>(StatusCodes.Status201Created)
+        .ProducesProblem(StatusCodes.Status400BadRequest)
+        .WithSummary("GetBasket")
+        .WithDescription("GetBasket");
     }
 }

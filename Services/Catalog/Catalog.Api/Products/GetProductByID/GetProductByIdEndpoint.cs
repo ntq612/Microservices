@@ -1,6 +1,4 @@
-﻿
-using Catalog.Api.Products.CreateProduct;
-
+﻿using Catalog.Api.Products.CreateProduct;
 namespace Catalog.Api.Products.GetProductByID;
 public record GetProductByIdResponse(Product Product);
 public class GetProductByIdEndpoint : ICarterModule

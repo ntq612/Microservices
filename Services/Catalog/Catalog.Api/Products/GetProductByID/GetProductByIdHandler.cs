@@ -1,10 +1,7 @@
-﻿
-using MediatR;
+﻿using MediatR;
 using Microsoft.Extensions.Logging;
-
 namespace Catalog.Api.Products.GetProductByID;
 public record GetProductByIdQuery(Guid id) : IQuery<GetProductByIdResult>;
-
 public record GetProductByIdResult(Product Product);
 internal class GetProductByIdQueryHandler
     (IDocumentSession session, ILogger<GetProductByIdQueryHandler> logger)

@@ -1,10 +1,7 @@
-﻿
-using Marten.Linq.SoftDeletes;
-
+﻿using Marten.Linq.SoftDeletes;
 namespace Catalog.Api.Products.UpdateProduct;
 public record UpdateProductCommand(Guid Id, string Name, List<string> Category, string Description, string ImageFile, decimal Price)
     : ICommand<UpdateProductResult>; 
-
 public class UpdateProductCommandValidator : AbstractValidator<UpdateProductCommand>
 {
     public UpdateProductCommandValidator()
@@ -15,7 +12,6 @@ public class UpdateProductCommandValidator : AbstractValidator<UpdateProductComm
         RuleFor(x => x.Price).GreaterThan(0).WithMessage("Price is not lower than 0");
     }
 }
-
 public record UpdateProductResult(bool IsSuccess);
 public class UpdateProductCommandHandler(IDocumentSession session)
     : ICommandHandler<UpdateProductCommand, UpdateProductResult>
@@ -32,7 +28,6 @@ public class UpdateProductCommandHandler(IDocumentSession session)
         product.Description = command.Description;
         product.ImageFile = command.ImageFile;
         product.Price = command.Price;
-
         session.Update(product);
         await session.SaveChangesAsync(cancellationToken);
         return new UpdateProductResult(true);
