@@ -17,16 +17,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{DA9562
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basket.API", "Services\Basket\Basket.API\Basket.API.csproj", "{841EA0C5-4193-45D7-938B-42F9071BFBDD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Picture", "Picture", "{3F57FB2C-CD3D-4B42-84F7-2ABFED46B6DB}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\Desktop\Pic\Big Picture.png = ..\..\..\Desktop\Pic\Big Picture.png
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Slide", "Slide", "{B578BCA8-1947-4BA4-84A6-7BE7BD81F46E}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\Downloads\dotnet+8+slides.pdf = ..\..\..\Downloads\dotnet+8+slides.pdf
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,8 +45,6 @@ Global
 		{CB39C4EA-9329-44E4-A68C-E90C53072BAC} = {8A2E8C5F-BFA4-4FBE-8446-E2389CCF660A}
 		{DA9562C7-19E5-4E54-B8A5-4447481145E7} = {EE86C110-92C2-4B25-A5A5-9171E84C9339}
 		{841EA0C5-4193-45D7-938B-42F9071BFBDD} = {DA9562C7-19E5-4E54-B8A5-4447481145E7}
-		{3F57FB2C-CD3D-4B42-84F7-2ABFED46B6DB} = {EE86C110-92C2-4B25-A5A5-9171E84C9339}
-		{B578BCA8-1947-4BA4-84A6-7BE7BD81F46E} = {EE86C110-92C2-4B25-A5A5-9171E84C9339}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D3ADAE2-1987-4885-A6C5-A37B583E23FE}
