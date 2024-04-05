@@ -1,4 +1,5 @@
 using Basket.API.Data;
+using Discount.Grpc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,11 +19,19 @@ builder.Services.AddMarten(opts =>
     opts.Schema.For<ShoppingCart>().Identity(x => x.UserName);
 }).UseLightweightSessions();
 builder.Services.AddScoped<IBasketRepository, BasketRepository>();
-builder.Services.Decorate<IBasketRepository, CachedBasketRepository>();
-builder.Services.AddStackExchangeRedisCache(options =>
+
+////Cached
+//builder.Services.Decorate<IBasketRepository, CachedBasketRepository>();
+
+//builder.Services.AddStackExchangeRedisCache(options =>
+//{
+//    options.Configuration = builder.Configuration.GetConnectionString("Redis");
+//    //options.InstanceName = "Basket";
+//});
+
+builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(options =>
 {
-    options.Configuration = builder.Configuration.GetConnectionString("Redis");
-    //options.InstanceName = "Basket";
+    options.Address = new Uri(builder.Configuration["GrpcSettings:DiscountUrl"]!);
 });
 var app = builder.Build();
 app.MapCarter();
