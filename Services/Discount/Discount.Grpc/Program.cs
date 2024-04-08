@@ -1,5 +1,6 @@
 using Discount.Grpc.Data;
 using Discount.Grpc.Services;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,13 @@ builder.Services.AddGrpc();
 builder.Services.AddDbContext<DiscountContext>(opts =>
 {
     opts.UseSqlite(builder.Configuration.GetConnectionString("Database"));
+});
+
+builder.WebHost.ConfigureKestrel(options =>
+{
+    // Setup a HTTP/2 endpoint without TLS.
+    options.ListenLocalhost(5052, o => o.Protocols =
+        HttpProtocols.Http2);
 });
 
 var app = builder.Build();

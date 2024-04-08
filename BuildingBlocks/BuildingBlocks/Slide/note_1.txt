@@ -1,0 +1,48 @@
+Source code
+
+- De maintain (de bao tri) => Phan lap -> Microservice adap
+- Deployment scale
+
+
+
+
+
+100 user
+
+
+500 user => deploy len no dap ung
+
+scale up Nang cap phan cung gan them ram gan them CPU
+
+sclate out 3 may phuc vu moi may deploy source => Docker/Kuberneste 
+
+Microservice
+
+Product Catalog
+1 instance -> 2 instance  => Go Lang, Node JS, Posgres Mongo
+
+
+
+Order service
+
+1 instance'
+
+
+Microservice => tinh tu tri
+
+
+
+Microservice communication
+
+de bi rot mang, security => Fault talorant 
+
+Retry
+
+Dua vo queue => Async communication => Event Driven Architecture
+
+
+
+
+
+
+

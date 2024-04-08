@@ -1,0 +1,32 @@
+Marten
+
+                  IDocumentStore
+		/	|      ^\
+	       /	|        \
+        IQuerySession   |	  DocumentStore
+	    ^/	\^      |    
+	    /  	 \	|
+QuerySession 	  \ 	|
+		   \	|
+		IDocumentSession
+		/^	|^	\^
+	       /	|	 \	
+	      /		|	  \
+	     /		|	   \
+	----/		|	    \----
+	|   LightWeightDocumentSession	|
+	|				|
+	|				|
+	|	DirtyCheckingDocumentSession
+	|
+	|
+IdentityMapDocumentSession	
+
+
+
+InitialData --> create example data for db
+LightWeightSession
+
+Paging
+
+Health Check

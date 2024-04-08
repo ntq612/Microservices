@@ -1,8 +1,10 @@
 using Basket.API.Data;
 using Discount.Grpc;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 
 var builder = WebApplication.CreateBuilder(args);
 
+///Applications services 
 var assembly = typeof(Program).Assembly;
 
 builder.Services.AddCarter();
@@ -12,7 +14,8 @@ builder.Services.AddMediatR(config =>
     config.AddOpenBehavior(typeof(ValidationBehavior<,>));
 });
 
-/// Config Marten
+///Data services
+///Config Marten
 builder.Services.AddMarten(opts =>
 {
     opts.Connection(builder.Configuration.GetConnectionString("Database")!);
@@ -29,10 +32,13 @@ builder.Services.AddScoped<IBasketRepository, BasketRepository>();
 //    //options.InstanceName = "Basket";
 //});
 
+///Grpc Services
 builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(options =>
 {
     options.Address = new Uri(builder.Configuration["GrpcSettings:DiscountUrl"]!);
 });
+
+
 var app = builder.Build();
 app.MapCarter();
 app.MapGet("/", () => "Hello World!");

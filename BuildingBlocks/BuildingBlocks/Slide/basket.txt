@@ -1,0 +1,7 @@
+Basket
+
+
+Shopping cart module
+
+
+using postgre and redis
