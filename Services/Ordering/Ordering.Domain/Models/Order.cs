@@ -1,12 +1,6 @@
 ﻿using Ordering.Domain.Abstractions;
 using Ordering.Domain.Enum;
 using Ordering.Domain.ValueObject;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Ordering.Domain.Models;
 public class Order : Aggregate<Guid>
 {
