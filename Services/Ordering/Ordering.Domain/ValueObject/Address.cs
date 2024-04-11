@@ -14,7 +14,7 @@ public record Address
     public string Country { get; } = default!;
     public string State { get; } = default!;
     public string ZipCode { get; } = default!;
-    private Address(string firstName, string lastName, string? emailAddress, string addressLine, string country, string state, string zipCode)
+    internal Address(string firstName, string lastName, string? emailAddress, string addressLine, string country, string state, string zipCode)
     {
         FirstName = firstName;
         LastName = lastName;

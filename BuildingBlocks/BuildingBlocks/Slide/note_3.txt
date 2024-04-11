@@ -1,0 +1,219 @@
+DDD 
+
+Aggregate la gi
+AggregateRoot 
+
+call event from api to infrastucture - applicant
+
+Viet code
+
+
+Domain Driven Design
+
+
+Clean Architect
+
+
+---- Domain -  Rule Business
+
+Application = Use Case
+Infrastructure
+Web Api
+
+
+Customer Rang buot business logic
+
+Product
+
+Category
+
+khi tao moi mot account - Validation
+
+
+ - Property
+
+Entity vs Value Object
+
+Entity la phai co Identity => ID
+Value Object thi khong can co ID (Address)
+
+Co can xai Value Object
+
+
+class Customer 
+{
+   public int Id {get; set;}
+   public string Name {get; set;}
+   public string Street {get;set;}
+   public string District {get; set;}
+}
+
+
+public class Customer 
+{
+   public Customer (int id, string name, Address address)
+   { 
+      if (id == 0)
+      {
+
+      }
+
+       Id = id;
+       Name = name;
+       Address = address
+   }
+
+   public int Id { private get; set;}
+   public string Name { private get; set;}
+   public Address Address { private get;set;}
+
+   public void SetNewAddress(Address address)
+   {
+       if (address == null)
+       {
+           throw new ArgumentException("Vui long nhap dia chi");
+       }
+
+       Address = address
+   }
+}
+
+DomainEvent
+
+public class Address
+{
+   public Address(string street, string district)
+   {
+       if (string.IsNullOrEmpty(street)
+       {
+          throw new ArgumentException("Vui long nhap dia chi");
+       }
+
+       if (string.IsNullOrEmpty(district)
+       {
+	  throw new ArgumentException("Vui long nhap quan huyen");
+       }
+   }
+
+   public string Street {get;set;}
+   public string District {get; set;}
+}
+
+
+var address = new Address (street, district)
+var customer = new Customer(id, name, street, district)
+
+var customer = _customerRepository.GetById(id);
+customer.SetNewAddress(
+
+
+DDD - BoundContext
+
+
+
+public class Product
+{
+   // Bound Context - Product Catalog
+   Name,
+   CategoryId,
+   Price.
+
+   // Bound context - Inventory
+   NumberOfStock
+   MinimumStock
+   
+  /// 
+}
+
+public class ProductCatalog
+{
+   Id,
+   Name,
+   Price
+}
+
+public class InventoryItem
+{
+   Id,
+   NumberOfStock
+   MinimumStock
+}
+
+
+Product  - Aggregate 
+Category - Aggregate 
+Brand    - Aggregate 
+
+AggregateRoot
+- Repository AggregateRoot
+
+
+IProductRepository
+
+BoundContext Ordering
+Order       Aggregate 
+OrderLine   Aggregate 
+
+IOrderRepository
+
+
+IOrderLineRepository
+
+Order GetOrder(Id id)
+
+SaveOrder(Order order)
+
+ProductAdded
+ProductQuatityChanged
+PricePriceChanged
+
+
+public void SetPrice(decimal price)
+{
+    Price = price;
+     
+    var productPriceChanged = new ProductPriceChanged(id, price)    
+
+    bus.Send(productPriceChanged)
+}
+
+
+
+ShoppingCart Microservice
+
+
+class ConsumeProductPriceChanged
+{
+   Consume(ProductPriceChanged event)
+   {
+ 
+   }
+}
+
+pub sub
+
+Domain Service
+
+ICheckExisintgCustomerName UniqueName(string name)
+CheckExisintgCustomerName
+
+class CheckExistingCustomerName : ICheckExisintgCustomerName 
+{
+     private readonly ICustomerRepository _customerRepostiry
+    
+   public CheckExistingCustomerName(ICustomerRepository customerRepostiry)
+   {
+_customerRepostiry = customerRepostiry);
+   }
+
+    public book UniqueName(string name)
+    {
+      
+    }
+
+}
+
+
+
+
+

@@ -1,5 +1,7 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Ordering.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +17,8 @@ public static class DependencyInjection
     {
         var connectionString = configuration.GetConnectionString("Database");
         //Add service to container
-        //services.AddDbContext<ApplicationDbContext>()
+        services.AddDbContext<ApplicationDbContext>(options => 
+            options.UseSqlServer(connectionString));
         return services;
     }
 }
