@@ -1,0 +1,11 @@
+viet code tuong minh
+refactor code de doc de hieu
+dat ten function tuong minh de hieu --> khong can vao ham con de doc code
+viet theo pattern cua team
+khong can thiet phai viet code qua dai
+tach function con cho tung service
+code cho moi nguoi trong team hieu ddeer deex maintain, fix 
+1 dev phai biet viet unit test --> ve hoc viet unit test
+tranh cai thi ha cai toi xuong --> tranh gay lon giua cac thanh vien
+team lead luon co nhung solutions tot cho team
+di theo khuon kho/pattern luon de dang cho so dong
