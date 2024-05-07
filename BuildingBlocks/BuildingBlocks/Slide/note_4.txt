@@ -1,0 +1,35 @@
+Observability
+- tracing
+- request Id, trace Id
+
+Do luoong hanh vi nguoi dung metrics
+
+
+File, Database
+
+Log Aggreator
+
+Elastic Search - de ghi log
+SeriLog
+
+
+Microservice => 
+
+Production ko debug
+
+Resilence va Failt Tolerance
+
+Retry
+Circuit Breaker : Co gang dap tat cuoc goi neu goi qua nhieu lan failed
+
+Open / Pending / Closed
+
+30s
+
+1-2 request
+
+60s
+
+https://www.udemy.com/course/design-microservices-architecture-with-patterns-principles/learn/lecture/36034572#overview
+
+
