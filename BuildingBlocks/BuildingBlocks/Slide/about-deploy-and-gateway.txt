@@ -1,0 +1,39 @@
+web mvc
+==========================  Gateway   ====================
+web spa
+mobile app
+
+------------------------------------
+gateway
+  - Ocelot
+  - Yarp
+
+services
+- order service
+- catalog service
+
+
+
+
+deploy cloud
+azure : 
+- gateway
+
+
+docker-image => push docker registry
+
+docker compose -f docker-compose.yml -f docker-compose.override.yml up -d --remove-orphans --build
+
+deploy local => docker container => deploy docker hub => cloud
+
+==============================   Identity Server 4    ================================
+
+WEb api
+
+Login / Logout/ Sign In / Token / Tao User 
+
+
+Identity Server 4
+
+Mobile/MVC Client => Gateway
+                       => Identity Server 4 => Gateway => Client

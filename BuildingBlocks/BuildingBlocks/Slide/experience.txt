@@ -1,20 +1,41 @@
-viet code tuong minh
-refactor code de doc de hieu
-dat ten function tuong minh de hieu 
+- viet code tuong minh
+- refactor code de doc de hieu
+- dat ten function tuong minh de hieu 
 --> khong can vao ham con de doc code
-viet theo pattern cua team
-khong can thiet phai viet code qua dai
-tach function con cho tung service
-code cho moi nguoi trong team hieu ddeer deex maintain, fix 
-1 dev phai biet viet unit test 
+- viet theo pattern cua team
+- khong can thiet phai viet code qua dai
+- tach function con cho tung service
+- code cho moi nguoi trong team hieu ddeer deex maintain, fix 
+- 1 dev phai biet viet unit test 
 --> ve hoc viet unit test
-tranh cai thi ha cai toi xuong 
+- tranh cai thi ha cai toi xuong 
 --> tranh gay lon giua cac thanh vien
-team lead luon co nhung solutions tot cho team
-di theo khuon kho/pattern luon de dang cho so dong
-viet doc phai ro rang, giai thich muc dich code
-bam sat Business Logic
-khong ro Buniness Logic --> note lai --> hoi khach hang
-su dung store - view - lamda - linq - entity fw trong query code
-limited dung so luong de tranh chan nguoi dung thay vi chan attack
-tim hieu Recurly
+- team lead luon co nhung solutions tot cho team
+- di theo khuon kho/pattern luon de dang cho so dong
+- viet doc phai ro rang, giai thich muc dich code
+- bam sat Business Logic
+- khong ro Buniness Logic --> note lai --> hoi khach hang
+- su dung store - view - lamda - linq - entity fw trong query code
+- limited dung so luong de tranh chan nguoi dung thay vi chan attack
+- tim hieu Recurly
+- khi khong the den cong ty on-time -> bao ngay cho mentor/lead
+- Khong hieu assignments? -> hoi lai voi vi the requestion
+- khong the hoan thanh assignment? -> khi den 25% assignment bi stuck
+--> bao cao lai de raise time/ giup do tu lead
+- training/meeting -> active -> raise question -> claim knowledge
+- meeting -> sastisfied -> agree together
+- khong share salary
+- khi muon increase salary -> tu danh gia nang luc cua ban than 
+- increase salary la 1 qua trinh 6 thang/ 1 nam the hien nang luc
+va performance cua ban than
+- biet minh o vi tri nao de deal luong
+- improve myself -> if you good -> they will keep you 
+- don't hate teamate -> personality each other is different
+- boss will make employees love him 
+- quit job -> must be nice with old company 
+- when quit job -> take responsibility with your company
+-> make sure you transfer total your job 
+========================  Team work  ===============================
+- teamwork focus vao archivement
+- thap nhu cau
+- 
