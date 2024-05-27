@@ -1,0 +1,42 @@
+Unit Test
+
+- For developer, khong lien quan gi testing cua QA
+- Developer phai bao dam moi ham minh viet ra no phai chay dung
+- Unit Test test cho function, function la don vi nho nhat cua mot module
+
+
+1 Module
+- 3 class, moi class no 3 function
+
+- 9 function can test
+
+moi function duoc unit test day du
+
+80% module nay chay dung
+
+su tuong tac giua cac function chua bao dam
+==> integration test
+
+
+Unit test se khong tuong tac truc tiep voi ben thu 3 (database, call third party)
+- khong insert database thiet, khong load data tu database thiet
+- khong call api thiet
+- Mock => gia du load tu database co du lieu
+
+
+Test coverage
+- Do bao phu cua Unit test voi Code base
+
+Unit test do chay tu dong nen no rang buot lai voi code change. Tai sao co code change (change logic, hay sua tam bay)
+
+
+Test Driven Design - TDD
+Cach viet phan mem - theo huong viet unit test truoc => xong moi viet code
+
+chay unit test => failed => sua code => chay unit test passed => nghi ra case moi => viet unit test failed => improve code de passed test case
+
+co the em viet code ma ko can implementation => tai vi minh mock unit test passed => code ma trien khai thiet duoi database co the khong cans
+
+
+
+Integration Test ???

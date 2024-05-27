@@ -1,0 +1,12 @@
+ElasticSearch  ---> using SeriLog 
+
+ElasticSearch: as a search engine but use for write log
+--> open-source, using restful API -> response a JSON format data
+easy to query, fast because it bases on Lucence
+
+
+
+Kibana ---> interface of ElasticSearch
+query data and graphs in ElasticSearch
+
+SeriLog --> Log information 

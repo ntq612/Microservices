@@ -1,15 +1,12 @@
 
-
-
 CQRS
 
 
-ReadModel Database => Qeury thuan (Dapper)
+ReadModel Database => Query thuan (Dapper)
 
 Sync
 
 WriteModel Database => Entity Framework, ORM, Hibernate
-
 
 Record Lock
 

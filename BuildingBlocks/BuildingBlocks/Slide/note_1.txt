@@ -4,9 +4,6 @@ Source code
 - Deployment scale
 
 
-
-
-
 100 user
 
 

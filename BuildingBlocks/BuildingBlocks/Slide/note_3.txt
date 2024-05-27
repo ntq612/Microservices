@@ -3,23 +3,17 @@ DDD
 Aggregate la gi
 AggregateRoot 
 
-call event from api to infrastucture - applicant
-
 Viet code
-
 
 Domain Driven Design
 
-
 Clean Architect
-
 
 ---- Domain -  Rule Business
 
 Application = Use Case
 Infrastructure
 Web Api
-
 
 Customer Rang buot business logic
 
@@ -28,7 +22,6 @@ Product
 Category
 
 khi tao moi mot account - Validation
-
 
  - Property
 
@@ -39,7 +32,6 @@ Value Object thi khong can co ID (Address)
 
 Co can xai Value Object
 
-
 class Customer 
 {
    public int Id {get; set;}
@@ -47,7 +39,6 @@ class Customer
    public string Street {get;set;}
    public string District {get; set;}
 }
-
 
 public class Customer 
 {
@@ -165,7 +156,7 @@ SaveOrder(Order order)
 
 ProductAdded
 ProductQuatityChanged
-PricePriceChanged
+ProductPriceChanged
 
 
 public void SetPrice(decimal price)

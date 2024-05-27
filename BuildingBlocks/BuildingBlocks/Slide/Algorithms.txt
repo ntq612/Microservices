@@ -1,0 +1,7 @@
+Palindrome: (x > 10)
+    while (x > 0)
+    {
+        var digit = x % 10;
+        reversed = reversed * 10 + digit;
+        x /= 10;
+    }
