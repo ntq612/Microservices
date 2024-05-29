@@ -1,5 +1,8 @@
 Unit Test
 
+- Khong co tac dong den database
+- Khong call api qua third party
+- Test cho tung method
 - For developer, khong lien quan gi testing cua QA
 - Developer phai bao dam moi ham minh viet ra no phai chay dung
 - Unit Test test cho function, function la don vi nho nhat cua mot module
@@ -27,7 +30,7 @@ Unit test se khong tuong tac truc tiep voi ben thu 3 (database, call third party
 Test coverage
 - Do bao phu cua Unit test voi Code base
 
-Unit test do chay tu dong nen no rang buot lai voi code change. Tai sao co code change (change logic, hay sua tam bay)
+Unit test do chay tu dong nen no rang buoc lai voi code change. Tai sao co code change (change logic, hay sua tam bay)
 
 
 Test Driven Design - TDD
@@ -40,3 +43,22 @@ co the em viet code ma ko can implementation => tai vi minh mock unit test passe
 
 
 Integration Test ???
+
+Integration test
+Test full luong
+- Co tac dong den database
+- Co call api third party
+- Sau khi chay integration test xong
+- Verify data duoi database
+- Call api get theo id => No da update ben third party
+
+
+Notice:
+- Setup data: Insert mot so data xuong db truoc
+=> Integration data
+- Clear data
+
+
+
+20%
+
