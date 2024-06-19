@@ -1,0 +1,15 @@
+SOLID
+
+S - Single Responsibility Principle
+
+a module should be responsible to one, and only one, actor
+--> solutions: separate big class to many small
+
+O - Opened-Closed Principle
+
+a class should be open to upgrade and close to change
+--> solutions:
+- separate class -> each class do 1 function
+- class/module should implement interface (interface play a contract roll)
+
+L - Liskov Substitution

@@ -1,6 +1,6 @@
 server side app : asp.net mvc, php, redirect authorization code flow
 
-spa single page application: Angualr, React
+spa single page application: Angular, React
 
 https://www.codeproject.com/Articles/1171546/OAuth-Authorization-flows-explained-with-examples
 

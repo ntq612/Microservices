@@ -1,0 +1,22 @@
+Event Sourcing
+
+
+EventId EventName      AggeegateId  
+1          AddProduct      1            { ProductId = 1, ProductName = "ABC" Price = 50 }
+2          ChangePrice     1            { ProductId = 1, Price = 70 }
+
+
+
+
+new Product {
+  Id = 1,
+  Product Name = "ABC"
+  Price = 50
+}
+
+new Product {
+  Id = 1,
+  Product Name = "ABC",
+  Price = 70
+}
+https://github.com/oskardudycz/EventSourcing.NetCore

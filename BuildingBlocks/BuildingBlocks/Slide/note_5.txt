@@ -13,7 +13,7 @@ state 1 ben thu 3
 
 
 server thu 3 redis
-\
+
 
 
 ung dung => 2 con server
